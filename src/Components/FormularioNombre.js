@@ -11,7 +11,7 @@ function FormularioNombre() {
     const manejarEnvio = (event) => {
         event.preventDefault();
 
-        let formatoNombre = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
+        let formatoNombre = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ]+(?:\s[a-zA-ZáéíóúÁÉÍÓÚñÑ]+)*$/;
         let validacion = true;
 
         if (!formatoNombre.test(nuevoNombre)) {
