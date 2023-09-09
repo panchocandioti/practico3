@@ -10,9 +10,20 @@ function FormularioNombre() {
 
     const manejarEnvio = (event) => {
         event.preventDefault();
-        
-        setNombre(nuevoNombre);
+
+        let formatoNombre = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
+        let validacion = true;
+
+        if (!formatoNombre.test(nuevoNombre)) {
+            alert("Por favor, ingresá un nombre");
+            validacion = false;
+        };
+
+        if (validacion) {
+            setNombre(nuevoNombre.toUpperCase());
+        };
     };
+
 
     return (
         <div>
@@ -33,7 +44,8 @@ function FormularioNombre() {
                 {nombre && <p>HOLA, {nombre}!</p>}
             </div>
         </div>
-    )
+    );
+
 }
 
 export default FormularioNombre;
