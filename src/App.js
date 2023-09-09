@@ -1,20 +1,14 @@
-import './App.css';
-import InterfazUsuario from './Components/InterfazUsuario';
+import React from 'react'
+import './App.css'
+import FormularioNombre from './Components/FormularioNombre'
 
 function App() {
   return (
-    <div>
-    <div className="App">
-      <header className="App-header">
-        <h1>¡Piedra, papel, tijeras!</h1>
-      </header>
+    <div className='App'>
+      <header className='App-header'>¡Piedra, papel, tijeras!</header>
+      <FormularioNombre/>
     </div>
-
-    <div>
-      <InterfazUsuario />
-    </div>
-    </div>
-  );
+  )
 }
 
-export default App;
+export default App
