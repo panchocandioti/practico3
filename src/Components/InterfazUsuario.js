@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Saludo from './Saludo';
 import BotonReset from './BotonReset';
 
-function FormularioNombre() {
+function InterfazUsuario() {
     const [nombre, setNombre] = useState('');
     const [nuevoNombre, setNuevoNombre] = useState('');
     const [mostrarFormulario, setMostrarFormulario] = useState(true);
@@ -32,8 +32,7 @@ function FormularioNombre() {
     return (
         <div>
             {mostrarFormulario ? (<div>
-            <h3>Jugá contra la computadora</h3>
-            <h3>El vencedor será el primero en ganar 3 rondas</h3>
+            
             <div className="formulario">
             <form className="formulario" onSubmit={manejarEnvio}>
                     <label>
@@ -54,4 +53,4 @@ function FormularioNombre() {
     );
 }
 
-export default FormularioNombre;
+export default InterfazUsuario;
