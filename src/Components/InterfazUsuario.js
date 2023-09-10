@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import Saludo from './Saludo';
 import BotonReset from './BotonReset';
+import SeleccionarJugada from './SeleccionarJugada';
 
 function InterfazUsuario() {
     const [nombre, setNombre] = useState('');
     const [nuevoNombre, setNuevoNombre] = useState('');
     const [mostrarFormulario, setMostrarFormulario] = useState(true);
     const [mostrarSaludo, setMostrarSaludo] = useState(true);
+    const [mostrarJuego, setMostrarJuego] = useState(false);
 
     const manejarCambioInput = (event) => {
         setNuevoNombre(event.target.value);
@@ -32,6 +34,7 @@ function InterfazUsuario() {
 
     const botonJugarClick = () => {
         setMostrarSaludo(false);
+        setMostrarJuego(true);
     };
 
     return (
@@ -59,8 +62,12 @@ function InterfazUsuario() {
                         <button onClick={botonJugarClick}>JUGAR</button>
                     </div>)
             )}
+            {mostrarJuego && (
+                    <div>
+                        <SeleccionarJugada nombre={nombre}/>
+                    </div>)}
         </div>
-    );
+    )
 }
 
 export default InterfazUsuario;
