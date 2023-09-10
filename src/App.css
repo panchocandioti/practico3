@@ -36,3 +36,20 @@ button {
   margin: 5px;
   padding: 5px;
 }
+
+img {
+  max-width: 100px;
+  padding: 1%;
+}
+
+img:hover {
+  border: 2px solid rgb(249, 249, 43);
+  cursor: pointer;
+}
+
+#contenedor-imagenes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1%
+}
