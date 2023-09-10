@@ -6,6 +6,7 @@ function InterfazUsuario() {
     const [nombre, setNombre] = useState('');
     const [nuevoNombre, setNuevoNombre] = useState('');
     const [mostrarFormulario, setMostrarFormulario] = useState(true);
+    const [mostrarSaludo, setMostrarSaludo] = useState(true);
 
     const manejarCambioInput = (event) => {
         setNuevoNombre(event.target.value);
@@ -29,26 +30,35 @@ function InterfazUsuario() {
         };
     };
 
+    const botonJugarClick = () => {
+        setMostrarSaludo(false);
+    };
+
     return (
         <div>
             {mostrarFormulario ? (<div>
-            
-            <div className="formulario">
-            <form className="formulario" onSubmit={manejarEnvio}>
-                    <label>
-                        Ingresa tu nombre para comenzar:
-                    </label>
-                    <input
-                        type="text"
-                        value={nuevoNombre}
-                        onChange={manejarCambioInput}
-                    />
-                    <button type="submit">GUARDAR NOMBRE</button>
-                    <BotonReset/>
-                </form>
-            </div>
+
+                <div className="formulario">
+                    <form className="formulario" onSubmit={manejarEnvio}>
+                        <label>
+                            Ingresa tu nombre para comenzar:
+                        </label>
+                        <input
+                            type="text"
+                            value={nuevoNombre}
+                            onChange={manejarCambioInput}
+                        />
+                        <button type="submit">GUARDAR NOMBRE</button>
+                        <BotonReset />
+                    </form>
+                </div>
             </div>) : (
-                    <Saludo nombre={nombre}/>)}
+                mostrarSaludo && (
+                    <div>
+                        <Saludo nombre={nombre} />
+                        <button onClick={botonJugarClick}>JUGAR</button>
+                    </div>)
+            )}
         </div>
     );
 }
