@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Saludo from './Saludo';
 import BotonReset from './BotonReset';
-import SeleccionarJugada from './SeleccionarJugada';
+import Jugar from './SeleccionarJugada';
 
 function InterfazUsuario() {
     const [nombre, setNombre] = useState('');
@@ -64,7 +64,7 @@ function InterfazUsuario() {
             )}
             {mostrarJuego && (
                     <div>
-                        <SeleccionarJugada nombre={nombre}/>
+                        <Jugar nombre={nombre}/>
                     </div>)}
         </div>
     )
