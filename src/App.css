@@ -27,12 +27,12 @@ input {
   text-align: center;
   margin: 10px;
   padding: 3px;
-  width: 250px;
+  width: 265px;
   font-size: medium;
 }
 
 button {
-  width: 260px;
+  width: 275px;
   margin: 5px;
   padding: 5px;
 }
@@ -43,13 +43,38 @@ img {
 }
 
 img:hover {
-  border: 2px solid rgb(249, 249, 43);
+  border: 3px solid rgb(132, 19, 19);
   cursor: pointer;
 }
 
-#contenedor-imagenes {
+.imagenes {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin: 1%
+}
+
+p, h2, h5 {
+  color:rgb(132, 19, 19);
+  font-weight: 600;
+}
+
+#jugadas, #tanteador {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 25%;
+  padding-right: 25%;
+  font-size: x-large;
+  border: 3px solid rgb(132, 19, 19);
+}
+
+#resultadoRonda {
+  background-color: goldenrod;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: xx-large;
+  color:red;
+  padding-left: 25%;
+  padding-right: 25%;
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Saludo from './Saludo';
 import BotonReset from './BotonReset';
-import Jugar from './SeleccionarJugada';
+import SeleccionarJugada from './SeleccionarJugada';
 
 function InterfazUsuario() {
     const [nombre, setNombre] = useState('');
@@ -9,6 +9,7 @@ function InterfazUsuario() {
     const [mostrarFormulario, setMostrarFormulario] = useState(true);
     const [mostrarSaludo, setMostrarSaludo] = useState(true);
     const [mostrarJuego, setMostrarJuego] = useState(false);
+    const [mostrarAlert, setMostrarAlert] = useState(false);
 
     const manejarCambioInput = (event) => {
         setNuevoNombre(event.target.value);
@@ -22,7 +23,7 @@ function InterfazUsuario() {
         let validacion = true;
 
         if (!formatoNombre.test(nuevoNombre)) {
-            alert("Por favor, ingresá un nombre");
+            setMostrarAlert(true);
             validacion = false;
         };
 
@@ -51,6 +52,7 @@ function InterfazUsuario() {
                             value={nuevoNombre}
                             onChange={manejarCambioInput}
                         />
+                        {mostrarAlert && (<p>Por favor, ingresá un nombre</p>)}
                         <button type="submit">GUARDAR NOMBRE</button>
                         <BotonReset />
                     </form>
@@ -64,7 +66,7 @@ function InterfazUsuario() {
             )}
             {mostrarJuego && (
                     <div>
-                        <Jugar nombre={nombre}/>
+                        <SeleccionarJugada nombre={nombre}/>
                     </div>)}
         </div>
     )

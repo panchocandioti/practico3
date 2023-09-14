@@ -10,14 +10,17 @@ function ResultadoRonda(props) {
     const [resultadoRonda, setResultadoRonda] = useState('');
     const [puntosUsuario, setPuntosUsuario] = useState(0);
     const [puntosCompu, setPuntosCompu] = useState(0);
-    const [mostrarJuego, setMostrarJuego] = useState(true);
     const [mostrarFinal, setMostrarFinal] = useState(false);
     const [vencedor, setVencedor] = useState('');
 
     useEffect(() => {
         determinarResultado();
-        determinarGanador();
     }, [props.jugadaCompu, props.jugadaUsuario]);
+
+    useEffect(() => {
+        determinarGanador();
+    }, [puntosCompu, puntosUsuario]);
+
 
     const sumaCompu = () => {
         setPuntosCompu(puntosCompu + 1);
@@ -52,28 +55,32 @@ function ResultadoRonda(props) {
     }
 
     const determinarGanador = () => {
-        if (puntosUsuario >= 3 || puntosCompu >= 3) {
-            setMostrarJuego(false);
+        if (puntosUsuario > 2 || puntosCompu > 2) {
             setMostrarFinal(true);
         }
         if (puntosUsuario > puntosCompu) {
             setVencedor(props.nombre)
-        } else {setVencedor("COMPU")};
+        } else { setVencedor("COMPU") };
     }
 
     return (
         <div>
-            {mostrarJuego && (<div>
-                <p>{props.nombre}: {props.jugadaUsuario}</p>
-                <p>COMPU: {props.jugadaCompu}</p>
-                <p>{resultadoRonda}</p>
-                <p>{props.nombre}: {puntosUsuario}</p>
-                <p>COMPU: {puntosCompu}</p>
-            </div>)}
+            <div>
+                <div id="jugadas">
+                    <p>{props.nombre}: {props.jugadaUsuario}</p>
+                    <p>COMPU: {props.jugadaCompu}</p>
+                </div>
+                <div id="resultadoRonda">
+                    <p>{resultadoRonda}</p>
+                </div>
+                <div id="tanteador">
+                    <p>{props.nombre}: {puntosUsuario}</p>
+                    <p>COMPU: {puntosCompu}</p>
+                </div>
+            </div>
             {mostrarFinal && (<div>
-                <p>{vencedor}</p>
-                <ResultadoPartido puntosCompu = {puntosCompu} puntosUsuario = {puntosUsuario}
-                    vencedor = {vencedor}
+                <ResultadoPartido puntosCompu={puntosCompu} puntosUsuario={puntosUsuario}
+                    vencedor={vencedor} mostrarFinal={mostrarFinal}
                 />
             </div>)}
         </div>

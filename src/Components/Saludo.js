@@ -4,7 +4,7 @@ function Saludo(props) {
 
     return (
         <div>
-            <div><h2>¡HOLA, {props.nombre}! ¿VAMOS A JUGAR?</h2>
+            <div><h2>¡HOLA, {props.nombre}!</h2>
             <h3>Vas a jugar contra la computadora</h3>
             <h3>¿Te acordás de las reglas?</h3>
             <h5>La piedra es demasiado dura para las tijeras</h5>

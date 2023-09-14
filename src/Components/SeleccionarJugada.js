@@ -14,23 +14,27 @@ function SeleccionarJugada(props) {
 
     const [jugadaUsuario, setJugadaUsuario] = useState('');
     const [jugadaCompu, setJugadaCompu] = useState('');
+    const [mostrarJuego, setMostrarJuego] = useState(false);
     
     const clickPiedra = () => {
         resetearJugadas();
         setJugadaUsuario(piedra);
         generarJugadaCompu();
+        setMostrarJuego(true);
     };
 
     const clickPapel = () => {
         resetearJugadas();
         setJugadaUsuario(papel);
         generarJugadaCompu();
+        setMostrarJuego(true);
     };
 
     const clickTijeras = () => {
         resetearJugadas();
         setJugadaUsuario(tijeras);
         generarJugadaCompu();
+        setMostrarJuego(true);
     };
 
     const generarJugadaCompu = () => {
@@ -46,14 +50,14 @@ function SeleccionarJugada(props) {
 
     return (
         <div>
-            <div>
+            <div className='imagenes'>
                 <img id="piedra" src={rock} alt="Piedra" onClick={clickPiedra}></img>
                 <img id="papel" src={paper} alt="Papel" onClick={clickPapel}></img>
                 <img id="tijeras" src={scissors} alt="Tijeras" onClick={clickTijeras}></img>
             </div>
-            <div>
+            {mostrarJuego && (<div>
                 <ResultadoRonda jugadaUsuario={jugadaUsuario} jugadaCompu={jugadaCompu} nombre={nombre} />
-            </div>
+            </div>)}
         </div>
     )
 }
