@@ -59,8 +59,8 @@ function ResultadoRonda(props) {
             setMostrarFinal(true);
         }
         if (puntosUsuario > puntosCompu) {
-            setVencedor(props.nombre)
-        } else { setVencedor("COMPU") };
+            setVencedor("¡GANASTE, " + props.nombre + "!")
+        } else { setVencedor("LO SIENTO, " + props.nombre + ", GANÓ LA COMPU...") };
     }
 
     return (

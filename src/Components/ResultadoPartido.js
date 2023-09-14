@@ -5,7 +5,7 @@ function ResultadoPartido(props) {
 
   return (
     <div id="mensajeFinalPartido">
-    <p>El vencedor es {props.vencedor}</p>
+    <p>{props.vencedor}</p>
     <BotonReset/>
     </div>
   )
