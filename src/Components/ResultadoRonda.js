@@ -6,6 +6,7 @@ function ResultadoRonda(props) {
     const piedra = "piedra";
     const papel = "papel";
     const tijeras = "tijeras";
+    const nombre = props.nombre;
 
     const [resultadoRonda, setResultadoRonda] = useState('');
     const [puntosUsuario, setPuntosUsuario] = useState(0);
@@ -59,7 +60,7 @@ function ResultadoRonda(props) {
             setMostrarFinal(true);
         }
         if (puntosUsuario > puntosCompu) {
-            setVencedor("¡GANASTE, " + props.nombre + "!")
+            setVencedor("¡GANASTE, " + props.nombre + "! ¡FELICITACIONES!")
         } else { setVencedor("LO SIENTO, " + props.nombre + ", GANÓ LA COMPU...") };
     }
 
@@ -80,7 +81,7 @@ function ResultadoRonda(props) {
             </div>
             {mostrarFinal && (<div>
                 <ResultadoPartido puntosCompu={puntosCompu} puntosUsuario={puntosUsuario}
-                    vencedor={vencedor} mostrarFinal={mostrarFinal}
+                    vencedor={vencedor} mostrarFinal={mostrarFinal} nombre={nombre}
                 />
             </div>)}
         </div>

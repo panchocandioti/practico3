@@ -77,16 +77,16 @@ h5 {
   align-items: center;
   font-size: x-large;
   border: 3px solid rgb(132, 19, 19);
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 10%;
+  margin-right: 10%;
   background-color: darkkhaki;
 }
 
 #resultadoRonda {
   background-color: goldenrod;
   font-size: xx-large;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 10%;
+  margin-right: 10%;
   border: 1px solid rgb(132, 19, 19);
 }
 
@@ -101,11 +101,11 @@ h5 {
   right: 0;
   bottom: 0;
   margin: auto;
-  width: 65%;
-  height: 55%;
+  width: 80%;
+  height: 80%;
   background-color: goldenrod;
   border: 4px solid rgb(132, 19, 19);
   padding: 2%;
   color: red;
-  font-size: 3rem;
+  font-size: 2rem;
 }
