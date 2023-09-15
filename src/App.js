@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import InterfazUsuario from './Components/InterfazUsuario'
+import fondo from './multimedia/fondo.jpg'
 
 function App() {
 
