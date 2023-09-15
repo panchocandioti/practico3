@@ -45,7 +45,7 @@ function InterfazUsuario() {
                 <div className="formulario">
                     <form className="formulario" onSubmit={manejarEnvio}>
                         <label>
-                            Ingresa tu nombre para comenzar:
+                            Ingresá tu nombre para comenzar:
                         </label>
                         <input
                             type="text"

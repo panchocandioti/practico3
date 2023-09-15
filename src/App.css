@@ -44,7 +44,7 @@ button {
   color: gold;
   padding: 2%;
   font-size: medium;
-  border: solid 2px orangered;
+  border: solid 2px red;
   border-radius: 10px;
   font-weight: 600;
 }
@@ -55,7 +55,7 @@ img {
 }
 
 img:hover {
-  border: 3px solid orangered;
+  border: 3px solid red;
   cursor: pointer;
 }
 
@@ -80,18 +80,18 @@ h5 {
   justify-content: space-around;
   align-items: center;
   font-size: x-large;
-  border: 3px solid red;
-  margin-left: 7.5%;
-  margin-right: 7.5%;
+  border: 3px solid rgb(41, 15, 88);
+  margin-left: 5%;
+  margin-right: 5%;
   background-color: rgb(156, 198, 222);
 }
 
 #resultadoRonda {
   background-color: rgba(252, 251, 250, 0.5);
   font-size: xx-large;
-  margin-left: 7.5%;
-  margin-right: 7.5%;
-  border: 1px solid red;
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 1px solid rgb(41, 15, 88);
 }
 
 #mensajeFinalPartido {
