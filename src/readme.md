@@ -24,7 +24,7 @@ El desarrollo de este juego forma parte de los contenidos del curso **Programaci
 
 El desarrollo del proyecto ¡Piedra, papel, tijeras! requiere la aplicación de los conocimientos adquiridos en el curso sobre programación en REACT, adaptando el desarrollo hecho en el práctico anterior en HTML, CSS y JavaScript.
 
-Durante la programación de este el estudiante va encontrando desafíos para los que debe buscar y adaptar distintos recursos, utilizando su criterio y creatividad, obligándose a numerosas pruebas de funcionamiento hasta lograr los objetivos.
+Durante la programación el estudiante va encontrando desafíos para los que debe buscar y adaptar distintos recursos, utilizando su criterio y creatividad, obligándose a numerosas pruebas de funcionamiento hasta lograr los objetivos.
 
 ## Autor
 
