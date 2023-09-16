@@ -34,7 +34,7 @@ function SeleccionarJugada(props) {
     const generarJugadaCompu = () => {
         let listaJugadas = [piedra, papel, tijeras];
         let jugadaNumeroCompu = Math.floor(Math.random() * 3);
-        setJugadaCompu(listaJugadas[jugadaNumeroCompu]);
+        setJugadaCompu((prevState) => listaJugadas[jugadaNumeroCompu]);
     }
 
     const resetearJugadas = () => {
@@ -44,7 +44,7 @@ function SeleccionarJugada(props) {
     }
 
     const jugadas = (eleccion) => {
-        setJugadaUsuario(eleccion);
+        setJugadaUsuario((prevState) => eleccion);
         generarJugadaCompu();
     }
 
