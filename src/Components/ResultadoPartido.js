@@ -1,6 +1,10 @@
 import React from 'react';
 import BotonReset from './BotonReset'
 
+// Este componente muestra el resultado del partido en forma de "pop up" manejado
+// de modo simple, manipulando los estilos del div "mensajeFinalPartido".
+// Se vuelve a mostrar el botón de RESET para poder volver a comenzar
+
 function ResultadoPartido(props) {
 
   return (

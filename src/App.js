@@ -1,7 +1,9 @@
 import React from 'react'
 import './App.css'
 import InterfazUsuario from './Components/InterfazUsuario'
-import fondo from './multimedia/fondo.jpg'
+
+//El componente App sólo quedó para mostrar el header, llamar a InterfazUsuario.js
+// y recibir los estilos desde App.css
 
 function App() {
 

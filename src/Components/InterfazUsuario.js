@@ -3,6 +3,11 @@ import Saludo from './Saludo';
 import BotonReset from './BotonReset';
 import SeleccionarJugada from './SeleccionarJugada';
 
+// El componente InterfazUsuario se utiliza para manejar el ingreso y validación del
+// nombre del usuario. Una vez aceptado el nombre, llama a Saludo.js en donde se explica
+// el juego. Se proporciona un botón JUGAR para finalmente llamar a SeleccionarJugada.js
+// que es el componente que comienza el juego, recibiendo como props el nombre del usuario.
+
 function InterfazUsuario() {
     const [nombre, setNombre] = useState('');
     const [nuevoNombre, setNuevoNombre] = useState('');

@@ -1,3 +1,6 @@
+/* Desde aquí se proporcionan los estilos a todos los componentes
+Se utilizaron selectores por tipo de etiqueta, por clases y por id */
+
 body {
   background-image: url("./multimedia/fondo.jpg");
   background-size: cover;

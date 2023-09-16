@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import ResultadoPartido from './ResultadoPartido';
 
+// Este componente determina el resultado de cada ronda y le suma puntaje al ganador.
+// Muestra la jugada de cada uno, el resultado de la ronda y el tanteador parcial.
+// Cuando alguno de los jugadores llega a tres rondas ganadas llama a ResultadoPartido.js
+// donde se mostrará el resultado final y un mensaje según gane el usuario o la computadora.
+// Para esto se le envían como props los puntos de cada jugador, el nombre del usuario,
+// y el jugador vencedor.
+
+
 function ResultadoRonda(props) {
 
     const piedra = "piedra";
@@ -81,7 +89,7 @@ function ResultadoRonda(props) {
             </div>
             {mostrarFinal && (<div>
                 <ResultadoPartido puntosCompu={puntosCompu} puntosUsuario={puntosUsuario}
-                    vencedor={vencedor} mostrarFinal={mostrarFinal} nombre={nombre}
+                    vencedor={vencedor} nombre={nombre}
                 />
             </div>)}
         </div>

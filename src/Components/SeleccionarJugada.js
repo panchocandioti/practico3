@@ -4,6 +4,12 @@ import paper from "../multimedia/paper.jpg"
 import scissors from "../multimedia/scissors.jpg"
 import ResultadoRonda from './ResultadoRonda';
 
+// Este componente muestra las imágenes de las tres opciones para hacer click.
+// A partir de cada click genera las jugadas de usuario y computadora,
+// llamando a ResultadoRonda.js en donde se determinará el resultado de cada ronda y
+// se le sumará puntaje al ganador. Para esto se le envían como props la jugada del
+// usuario, la jugada de la computadora, el nombre y una variable forceRender para
+// evitar jugadas en falso cuando se repiten resultados idénticos de ronda.
 
 function SeleccionarJugada(props) {
 
