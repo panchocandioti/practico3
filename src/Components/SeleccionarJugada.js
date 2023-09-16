@@ -15,6 +15,7 @@ function SeleccionarJugada(props) {
     const [jugadaUsuario, setJugadaUsuario] = useState('');
     const [jugadaCompu, setJugadaCompu] = useState('');
     const [mostrarJuego, setMostrarJuego] = useState(false);
+    const [forceRender, setForceRender] = useState(false);
     
     const clickPiedra = () => {
         resetearJugadas();
@@ -44,6 +45,7 @@ function SeleccionarJugada(props) {
     }
 
     const jugadas = (eleccion) => {
+        setForceRender((prev) => !prev);
         setJugadaUsuario((prevState) => eleccion);
         generarJugadaCompu();
     }
@@ -56,7 +58,7 @@ function SeleccionarJugada(props) {
                 <img id="tijeras" src={scissors} alt="Tijeras" onClick={clickTijeras}></img>
             </div>
             {mostrarJuego && (<div>
-                <ResultadoRonda jugadaUsuario={jugadaUsuario} jugadaCompu={jugadaCompu} nombre={nombre} />
+                <ResultadoRonda jugadaUsuario={jugadaUsuario} jugadaCompu={jugadaCompu} nombre={nombre} forceRender = {forceRender}/>
             </div>)}
         </div>
     )

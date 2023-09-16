@@ -16,7 +16,7 @@ function ResultadoRonda(props) {
 
     useEffect(() => {
         determinarResultado();
-    }, [props.jugadaCompu, props.jugadaUsuario]);
+    }, [props.jugadaCompu, props.jugadaUsuario, props.forceRender]);
 
     useEffect(() => {
         determinarGanador();
