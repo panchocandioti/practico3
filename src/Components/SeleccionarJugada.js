@@ -18,23 +18,17 @@ function SeleccionarJugada(props) {
     
     const clickPiedra = () => {
         resetearJugadas();
-        setJugadaUsuario(piedra);
-        generarJugadaCompu();
-        setMostrarJuego(true);
+        jugadas(piedra);
     };
 
     const clickPapel = () => {
         resetearJugadas();
-        setJugadaUsuario(papel);
-        generarJugadaCompu();
-        setMostrarJuego(true);
+        jugadas(papel);
     };
 
     const clickTijeras = () => {
         resetearJugadas();
-        setJugadaUsuario(tijeras);
-        generarJugadaCompu();
-        setMostrarJuego(true);
+        jugadas(tijeras);
     };
 
     const generarJugadaCompu = () => {
@@ -44,8 +38,14 @@ function SeleccionarJugada(props) {
     }
 
     const resetearJugadas = () => {
-        setJugadaUsuario('');
-        setJugadaCompu('');
+        setMostrarJuego(true);
+        setJugadaUsuario((prevState) => '');
+        setJugadaCompu((prevState) => '');
+    }
+
+    const jugadas = (eleccion) => {
+        setJugadaUsuario(eleccion);
+        generarJugadaCompu();
     }
 
     return (
